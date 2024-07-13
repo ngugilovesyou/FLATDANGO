@@ -1,0 +1,23 @@
+body{
+    
+}
+#main-header{
+    background-color: lightblue
+}
+#form{
+    text-align: right;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+.type {
+    width: 15%;
+    height: 28px;
+    border-radius: 10px;
+}
+.search-btn{
+    height: 25px;
+    border-radius: 8px; 
+    width:5% ;
+    background-color: rebeccapurple;
+    font: 1em sans-serif;
+}
