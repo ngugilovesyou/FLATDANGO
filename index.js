@@ -37,19 +37,21 @@ const getFilmDetails = (film)=>{
   runtime.textContent = `Runtime: ${film.runtime} minutes`;
   capacity.textContent = `Capacity: ${film.capacity}`
   showtime.textContent = `Showtime: ${film.showtime}`;
-  const tickets_sold = film.capacity - film.tickets_sold;
-  tickets_sold.textContent =`Tickets sold: ${film.tickets_sold}`
+  tickets_sold.textContent = `Tickets sold: ${film.tickets_sold}`
   description.textContent = film.description;
   
-   button.disabled = tickets_sold === 0;
-   button.addEventListener('click',buyTicket)
+   
+   button.addEventListener('click',buyTicket(film))
 }
- function buyTicket(){
+ function buyTicket(film){
   const available = film.capacity - film.tickets_sold;
         if (available > 0) {
-            film.tickets_sold++;
+            film.tickets_sold ++;
             getFilmDetails(film);
         }
+
+        if (tickets_sold === 0)
+          return 'Sold out'
     }
 
      
